@@ -4,7 +4,7 @@
 <nav class="navbar navbar-expand-lg wx-navbar py-2">
   <div class="container">
     <!-- Brand Logo Lockup (Integrated Wheelyx Mark) -->
-    <a class="navbar-brand d-flex align-items-center me-4" href="${pageContext.request.contextPath}/home">
+    <a class="navbar-brand d-flex align-items-center me-3 me-lg-4 py-1" href="${pageContext.request.contextPath}/home" title="Wheelyx — Move Your Way">
       <img src="${pageContext.request.contextPath}/assets/images/logo/wheelyx-logo.png" 
            alt="Wheelyx — Move Your Way" 
            class="wx-brand-logo"

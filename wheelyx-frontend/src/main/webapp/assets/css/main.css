@@ -109,15 +109,23 @@ a:hover {
 }
 
 .wx-brand-logo {
-  height: 48px;
+  height: 54px;
   width: auto;
-  max-width: 170px;
+  max-width: 220px;
   object-fit: contain;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  display: block;
 }
 
 .wx-brand-logo:hover {
-  transform: scale(1.03);
+  transform: scale(1.04);
+}
+
+@media (max-width: 768px) {
+  .wx-brand-logo {
+    height: 44px;
+    max-width: 170px;
+  }
 }
 
 .wx-nav-link {

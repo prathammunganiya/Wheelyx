@@ -6,9 +6,9 @@
       <!-- Brand & Mission -->
       <div class="col-lg-4 col-md-6">
         <img src="${pageContext.request.contextPath}/assets/images/logo/wheelyx-logo.png" 
-             alt="Wheelyx" 
-             class="mb-3"
-             style="height: 48px; width: auto; object-fit: contain; filter: brightness(1.1);"
+             alt="Wheelyx — Move Your Way" 
+             class="mb-3 rounded"
+             style="height: 58px; width: auto; object-fit: contain; background: rgba(255, 255, 255, 0.96); padding: 5px 12px; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);"
              onerror="this.onerror=null; this.src='${pageContext.request.contextPath}/assets/images/logo/wheelyx-logo.svg';">
         <p class="text-white-50 small mb-2">
           <strong>Wheelyx</strong> — Integrated Vehicle Rental and Fleet Management Platform.

@@ -21,9 +21,9 @@
           <!-- Logo & Header -->
           <div class="text-center mb-4">
             <img src="${pageContext.request.contextPath}/assets/images/logo/wheelyx-logo.png" 
-                 alt="Wheelyx" 
-                 style="height: 50px; width: auto; object-fit: contain;"
-                 class="mb-2"
+                 alt="Wheelyx — Move Your Way" 
+                 style="height: 64px; width: auto; object-fit: contain;"
+                 class="mb-3"
                  onerror="this.onerror=null; this.src='${pageContext.request.contextPath}/assets/images/logo/wheelyx-logo.svg';">
             <h3 class="fw-bold mb-1">Join Wheelyx Platform</h3>
             <p class="text-muted small">Select your registration profile below</p>

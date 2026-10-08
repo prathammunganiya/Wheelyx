@@ -70,7 +70,7 @@
         <div class="col-sm-6 mb-3 mb-sm-0">
           <div class="d-flex align-items-center gap-2 mb-2">
             <img src="${pageContext.request.contextPath}/assets/images/logo/wheelyx-logo.png" 
-                 alt="Wheelyx" style="height: 40px; width: auto;" class="rounded">
+                 alt="Wheelyx" style="height: 52px; width: auto; object-fit: contain;" class="rounded">
             <div>
               <h1 class="h4 fw-bold mb-0">Wheelyx</h1>
               <div class="text-muted small">Move Your Way.</div>
