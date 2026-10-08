@@ -1,0 +1,584 @@
+/* =====================================================================
+   WHEELYX — Enterprise Mobility & Fleet Management Platform
+   Design System & Global Stylesheet
+   Color Tokens, Dark Mode Matrix, Glassmorphism, Responsive Typography
+   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Wheelyx Core Brand Palette */
+  --wx-navy: #0B1F3A;
+  --wx-navy-dark: #081426;
+  --wx-royal: #155EEF;
+  --wx-royal-hover: #1048B8;
+  --wx-cyan: #00B8D9;
+  --wx-cyan-light: #E0F8FC;
+  --wx-purple: #7C3AED;
+  
+  /* Semantic Statuses */
+  --wx-success: #16A34A;
+  --wx-success-bg: #DCFCE7;
+  --wx-warning: #F59E0B;
+  --wx-warning-bg: #FEF3C7;
+  --wx-danger: #DC2626;
+  --wx-danger-bg: #FEE2E2;
+  
+  /* Light Theme Variables */
+  --wx-bg: #F5F7FA;
+  --wx-surface: #FFFFFF;
+  --wx-surface-secondary: #F8FAFC;
+  --wx-text: #172033;
+  --wx-text-secondary: #475569;
+  --wx-text-muted: #64748B;
+  --wx-border: #E2E8F0;
+  --wx-border-light: #F1F5F9;
+  --wx-card-shadow: 0 4px 20px -2px rgba(11, 31, 58, 0.06), 0 2px 6px -1px rgba(11, 31, 58, 0.04);
+  --wx-card-shadow-hover: 0 12px 30px -4px rgba(21, 94, 239, 0.12), 0 4px 12px -2px rgba(11, 31, 58, 0.06);
+  --wx-navbar-bg: rgba(255, 255, 255, 0.92);
+  --wx-navbar-border: rgba(226, 232, 240, 0.8);
+  --wx-hero-gradient: linear-gradient(135deg, #0B1F3A 0%, #155EEF 60%, #00B8D9 100%);
+  --wx-accent-gradient: linear-gradient(135deg, #155EEF 0%, #00B8D9 100%);
+}
+
+/* Dark Theme Matrix */
+[data-theme="dark"] {
+  --wx-bg: #070F1D;
+  --wx-surface: #0E1B2E;
+  --wx-surface-secondary: #13243C;
+  --wx-text: #F1F5F9;
+  --wx-text-secondary: #CBD5E1;
+  --wx-text-muted: #94A3B8;
+  --wx-border: #1E3352;
+  --wx-border-light: #16263D;
+  --wx-card-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.45);
+  --wx-card-shadow-hover: 0 12px 36px -4px rgba(0, 184, 217, 0.2);
+  --wx-navbar-bg: rgba(14, 27, 46, 0.92);
+  --wx-navbar-border: rgba(30, 51, 82, 0.8);
+  --wx-hero-gradient: linear-gradient(135deg, #050C17 0%, #0B1F3A 60%, #155EEF 100%);
+  --wx-success-bg: rgba(22, 163, 74, 0.15);
+  --wx-warning-bg: rgba(245, 158, 11, 0.15);
+  --wx-danger-bg: rgba(220, 38, 38, 0.15);
+}
+
+/* Base Resets & Global Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--wx-bg);
+  color: var(--wx-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6, .brand-font {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  color: var(--wx-text);
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: var(--wx-royal);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--wx-cyan);
+}
+
+/* Glassmorphism Navbar */
+.wx-navbar {
+  background: var(--wx-navbar-bg) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--wx-navbar-border);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  transition: all 0.3s ease;
+}
+
+.wx-brand-logo {
+  height: 48px;
+  width: auto;
+  max-width: 170px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.wx-brand-logo:hover {
+  transform: scale(1.03);
+}
+
+.wx-nav-link {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--wx-text-secondary) !important;
+  padding: 0.5rem 0.9rem !important;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.wx-nav-link:hover, .wx-nav-link.active {
+  color: var(--wx-royal) !important;
+  background-color: rgba(21, 94, 239, 0.08);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: var(--wx-surface);
+  border: 1px solid var(--wx-border);
+  color: var(--wx-text);
+  padding: 0.45rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--wx-royal);
+  color: var(--wx-royal);
+  transform: translateY(-1px);
+}
+
+/* Buttons */
+.btn-wx-primary {
+  background: var(--wx-accent-gradient);
+  color: #FFFFFF !important;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 0.65rem 1.4rem;
+  box-shadow: 0 4px 14px 0 rgba(21, 94, 239, 0.35);
+  transition: all 0.25s ease;
+}
+
+.btn-wx-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(0, 184, 217, 0.45);
+  color: #FFFFFF !important;
+}
+
+.btn-wx-outline {
+  background: transparent;
+  color: var(--wx-royal) !important;
+  border: 1.5px solid var(--wx-royal);
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.6rem 1.3rem;
+  transition: all 0.25s ease;
+}
+
+.btn-wx-outline:hover {
+  background: var(--wx-royal);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+}
+
+.btn-wx-secondary {
+  background: var(--wx-surface);
+  color: var(--wx-text) !important;
+  border: 1px solid var(--wx-border);
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.btn-wx-secondary:hover {
+  border-color: var(--wx-text-secondary);
+  background: var(--wx-surface-secondary);
+}
+
+.btn-wx-cancel {
+  background: transparent;
+  color: var(--wx-text-muted) !important;
+  border: 1px solid var(--wx-border);
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.btn-wx-cancel:hover {
+  color: var(--wx-danger) !important;
+  border-color: var(--wx-danger);
+  background-color: var(--wx-danger-bg);
+}
+
+/* Cards & Surfaces */
+.wx-card {
+  background-color: var(--wx-surface);
+  border: 1px solid var(--wx-border);
+  border-radius: 16px;
+  box-shadow: var(--wx-card-shadow);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.wx-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--wx-card-shadow-hover);
+  border-color: rgba(21, 94, 239, 0.3);
+}
+
+/* Vehicle Card Layout */
+.vehicle-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.vehicle-img-wrapper {
+  position: relative;
+  background: #FFFFFF;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 210px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--wx-border);
+}
+
+[data-theme="dark"] .vehicle-img-wrapper {
+  background: #0B1726;
+}
+
+.vehicle-img-wrapper img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.vehicle-card:hover .vehicle-img-wrapper img {
+  transform: scale(1.06);
+}
+
+.vehicle-badge-category {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(11, 31, 58, 0.85);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  backdrop-filter: blur(8px);
+}
+
+.vehicle-badge-status {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+}
+
+.status-available {
+  background: var(--wx-success-bg);
+  color: var(--wx-success);
+}
+
+.status-booked {
+  background: var(--wx-warning-bg);
+  color: var(--wx-warning);
+}
+
+.status-rental {
+  background: rgba(0, 184, 217, 0.15);
+  color: var(--wx-cyan);
+}
+
+.status-maintenance {
+  background: var(--wx-danger-bg);
+  color: var(--wx-danger);
+}
+
+.vehicle-spec-pill {
+  font-size: 0.8rem;
+  color: var(--wx-text-secondary);
+  background: var(--wx-surface-secondary);
+  padding: 0.25rem 0.55rem;
+  border-radius: 6px;
+  border: 1px solid var(--wx-border);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Hero Section */
+.wx-hero-section {
+  background: var(--wx-hero-gradient);
+  color: #FFFFFF;
+  padding: 5.5rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.wx-hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(0, 184, 217, 0.2) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero-tagline {
+  color: var(--wx-cyan);
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.hero-title {
+  font-size: 3.4rem;
+  font-weight: 900;
+  line-height: 1.15;
+  color: #FFFFFF;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 580px;
+}
+
+/* Search Bar Component */
+.wx-search-bar {
+  background: var(--wx-surface);
+  border: 1px solid var(--wx-border);
+  border-radius: 18px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(11, 31, 58, 0.12);
+  margin-top: -2.5rem;
+  position: relative;
+  z-index: 20;
+}
+
+/* Category Grid */
+.category-card {
+  background: var(--wx-surface);
+  border: 1px solid var(--wx-border);
+  border-radius: 14px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: all 0.25s ease;
+  height: 100%;
+}
+
+.category-card:hover {
+  border-color: var(--wx-royal);
+  transform: translateY(-4px);
+  box-shadow: var(--wx-card-shadow-hover);
+}
+
+.category-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background: rgba(21, 94, 239, 0.1);
+  color: var(--wx-royal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  transition: all 0.25s ease;
+}
+
+.category-card:hover .category-icon-box {
+  background: var(--wx-accent-gradient);
+  color: #FFFFFF;
+  transform: scale(1.1);
+}
+
+/* Dashboard Sidebars */
+.wx-sidebar {
+  background: var(--wx-surface);
+  border-right: 1px solid var(--wx-border);
+  min-height: calc(100vh - 72px);
+  padding: 1.5rem 1rem;
+}
+
+.wx-sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.75rem 1rem;
+  color: var(--wx-text-secondary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  transition: all 0.2s ease;
+}
+
+.wx-sidebar-link:hover, .wx-sidebar-link.active {
+  background: rgba(21, 94, 239, 0.1);
+  color: var(--wx-royal);
+}
+
+/* KPI Stat Cards */
+.kpi-card {
+  background: var(--wx-surface);
+  border: 1px solid var(--wx-border);
+  border-radius: 14px;
+  padding: 1.4rem;
+  box-shadow: var(--wx-card-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kpi-value {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--wx-text);
+  line-height: 1.2;
+}
+
+.kpi-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--wx-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kpi-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+/* Tables */
+.wx-table {
+  width: 100%;
+  color: var(--wx-text);
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.wx-table th {
+  background: var(--wx-surface-secondary);
+  color: var(--wx-text-muted);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--wx-border);
+}
+
+.wx-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--wx-border);
+  vertical-align: middle;
+  font-size: 0.92rem;
+}
+
+.wx-table tr:hover td {
+  background-color: var(--wx-surface-secondary);
+}
+
+/* Forms */
+.form-label {
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--wx-text-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.form-control, .form-select {
+  background-color: var(--wx-surface) !important;
+  border: 1px solid var(--wx-border) !important;
+  color: var(--wx-text) !important;
+  border-radius: 10px !important;
+  padding: 0.65rem 0.9rem !important;
+  font-size: 0.95rem !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--wx-royal) !important;
+  box-shadow: 0 0 0 3px rgba(21, 94, 239, 0.15) !important;
+}
+
+/* Empty State Component */
+.empty-state-box {
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+  background: var(--wx-surface);
+  border: 1px dashed var(--wx-border);
+  border-radius: 16px;
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+  color: var(--wx-text-muted);
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+.wx-footer {
+  background: var(--wx-navy-dark);
+  color: #94A3B8;
+  padding: 4.5rem 0 2rem;
+  margin-top: auto;
+  border-top: 1px solid #1E293B;
+}
+
+.wx-footer h5 {
+  color: #FFFFFF;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+}
+
+.wx-footer a {
+  color: #94A3B8;
+}
+
+.wx-footer a:hover {
+  color: var(--wx-cyan);
+}
+
+/* Print Invoice Stylesheet */
+@media print {
+  .no-print, .wx-navbar, .wx-footer, .btn, .theme-toggle-btn {
+    display: none !important;
+  }
+  body, .wx-card {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
