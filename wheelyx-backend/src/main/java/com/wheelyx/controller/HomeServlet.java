@@ -1,6 +1,5 @@
 package com.wheelyx.controller;
 
-import com.wheelyx.dao.ReportDAO;
 import com.wheelyx.model.City;
 import com.wheelyx.model.Review;
 import com.wheelyx.model.Vehicle;
@@ -21,7 +20,6 @@ public class HomeServlet extends HttpServlet {
 
     private final FleetService fleetService = new FleetService();
     private final ReviewService reviewService = new ReviewService();
-    private final ReportDAO reportDAO = new ReportDAO();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

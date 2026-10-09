@@ -94,15 +94,6 @@
               <i class="bi bi-box-arrow-in-right me-1"></i> Sign In to Portal
             </button>
 
-            <!-- Test Credentials Hint -->
-            <div class="p-3 bg-light rounded-3 small border mb-3">
-              <div class="fw-bold text-muted mb-1"><i class="bi bi-key-fill text-warning me-1"></i> Demo Credentials:</div>
-              <div class="text-secondary" style="font-size: 0.8rem;">
-                Customer: <code>customer@wheelyx.com</code> / <code>Customer@123</code><br>
-                Owner: <code>owner@wheelyx.com</code> / <code>Owner@123</code><br>
-                Admin: <code>admin@wheelyx.com</code> / <code>Admin@123</code>
-              </div>
-            </div>
 
             <div class="text-center small text-muted">
               Don't have an account? 

@@ -3,7 +3,6 @@ package com.wheelyx.dao;
 import com.wheelyx.config.DBConnection;
 import com.wheelyx.model.VehicleLocation;
 
-import java.math.BigDecimal;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

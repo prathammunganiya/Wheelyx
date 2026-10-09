@@ -2,7 +2,6 @@ package com.wheelyx.dao;
 
 import com.wheelyx.config.DBConnection;
 
-import java.math.BigDecimal;
 import java.sql.*;
 import java.util.*;
 

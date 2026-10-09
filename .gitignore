@@ -13,3 +13,5 @@ Thumbs.db
 configuration.properties
 db.properties
 uploads/temp/
+cloudflared.exe
+*.exe

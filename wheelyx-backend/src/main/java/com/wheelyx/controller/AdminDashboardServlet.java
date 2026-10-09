@@ -18,7 +18,6 @@ public class AdminDashboardServlet extends HttpServlet {
 
     private final ReportDAO reportDAO = new ReportDAO();
     private final BookingDAO bookingDAO = new BookingDAO();
-    private final VehicleDAO vehicleDAO = new VehicleDAO();
     private final AuditLogDAO auditLogDAO = new AuditLogDAO();
 
     @Override

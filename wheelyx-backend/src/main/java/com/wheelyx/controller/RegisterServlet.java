@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name = "RegisterServlet", urlPatterns = {"/auth/register", "/owner/register"})
+@WebServlet(name = "RegisterServlet", urlPatterns = {"/auth/register", "/owner/register", "/register"})
 public class RegisterServlet extends HttpServlet {
 
     private final AuthService authService = new AuthService();

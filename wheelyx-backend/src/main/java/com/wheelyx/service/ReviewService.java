@@ -10,7 +10,6 @@ public class ReviewService {
 
     private final ReviewDAO reviewDAO = new ReviewDAO();
     private final RentalDAO rentalDAO = new RentalDAO();
-    private final VehicleDAO vehicleDAO = new VehicleDAO();
 
     public boolean submitReview(Long rentalId, Long customerId, int rating, String comment, String ipAddress) {
         if (!ValidationUtil.isValidRating(rating) || !ValidationUtil.isNotEmpty(comment)) {
