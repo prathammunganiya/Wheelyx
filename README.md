@@ -122,18 +122,6 @@ http://localhost:8080/wheelyx/
 
 ---
 
-## 6. Seed Accounts & Credentials
-
-| Role | Email | Password | Access Path |
-| :--- | :--- | :--- | :--- |
-| **Administrator** | `admin@wheelyx.com` | `Admin@123` | `/wheelyx/admin/dashboard` |
-| **Vehicle Owner** | `owner@wheelyx.com` | `Owner@123` | `/wheelyx/owner/dashboard` |
-| **Customer** | `customer@wheelyx.com` | `Customer@123` | `/wheelyx/customer/dashboard` |
-
-*All seed passwords are encrypted using BCrypt (12 rounds) with salt.*
-
----
-
 ## 7. Security & Key Features
 
 - **Strict Role Separation:** Dynamic `CustomerAuthFilter`, `OwnerAuthFilter`, and `AdminAuthFilter` protect private routes. Cross-role tampering is blocked with session validation.
