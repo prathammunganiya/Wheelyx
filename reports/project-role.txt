@@ -1,0 +1,44 @@
+======================================================================
+WHEELYX - INTEGRATED VEHICLE RENTAL AND FLEET MANAGEMENT PLATFORM
+Project Role & Responsibility Matrix
+======================================================================
+
+1. PROJECT OVERVIEW
+----------------------------------------------------------------------
+Project Title : Wheelyx — Integrated Vehicle Rental and Fleet Management Platform
+Platform Type : Full-Stack Enterprise Web Application (MVC, Servlets, JDBC, MySQL)
+Architecture  : Three Role Segregation (Customer, Vehicle Owner, Platform Admin)
+Timeline      : 10 Weeks (06 July 2026 - 13 September 2026)
+
+2. TEAM ROLES & RESPONSIBILITIES
+----------------------------------------------------------------------
+Role 1: Team Lead & Full-Stack Architect
+- Architecture design, Jakarta EE 10 / Tomcat 10.1 setup, Maven lifecycle.
+- Security filters (CustomerAuthFilter, OwnerAuthFilter, AdminAuthFilter).
+- Core concurrency-safe booking engine and database transaction integrity.
+- Deployment automation, Docker configuration, and Cloudflare Tunnel sharing.
+
+Role 2: Backend & Database Specialist
+- Relational schema design (17 tables in 3NF), composite indexes, and seed data.
+- HikariCP connection pooling, JDBC DAOs, and parameterized PreparedStatements.
+- Billing calculations, 18% GST engine, and simulated payment gateway.
+- Fleet maintenance grounding and administrative audit log recording.
+
+Role 3: Frontend & UI/UX Specialist
+- Responsive Bootstrap 5.3 UI, custom CSS variables, and persistent Dark/Light theme.
+- Dynamic AJAX city/place lookup (/api/places) and vehicle catalog filtering.
+- GPS radar telemetry view, Leaflet/Google Maps integration, and Chart.js reporting.
+- Printable tax invoices (WX-INV-XXXXXXXX) and customer review submission flows.
+
+Role 4: QA Engineer & Documentation Specialist
+- JUnit 5 automated test suite (BillingCalculationTest, ValidationUtilTest, etc.).
+- Cross-browser compatibility and mobile responsiveness verification.
+- Software Requirements Specification (SRS), UML system models, and weekly reports.
+- Slide deck (PPT) authoring, demonstration video walkthrough, and Viva defense prep.
+
+3. FACULTY GUIDE & ACADEMIC SUPERVISION
+----------------------------------------------------------------------
+- Periodic weekly milestone review and sign-off.
+- Verification of IEEE 830 SRS, UML models, and test reports.
+- Final academic evaluation and viva voce assessment.
+======================================================================

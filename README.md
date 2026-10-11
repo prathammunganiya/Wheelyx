@@ -545,7 +545,51 @@ For evaluation and testing purposes, `seed.sql` populates default demonstration 
 
 ---
 
-## 16. Git Development & Branching Strategy
+## 16. 10-Week Development Timeline & Progress Tracking
+
+### Progress Summary
+- **Project Start Date:** 06 July 2026
+- **Project Completion Date:** 13 September 2026
+- **Total Duration:** 10 Weeks (70 Days)
+- **Completed Weeks:** 10 / 10 (100% Progress)
+- **Pending Weeks:** 0 / 10 (0% Pending)
+
+### Weekly Progress Tracking Table
+
+| Week # | Date Interval | Milestone & Core Focus | Weekly Work Description in Brief | Status | Detailed Report |
+| :---: | :---: | :--- | :--- | :---: | :---: |
+| **Week 1** | 06 Jul 2026 – 12 Jul 2026 | Team Formation + Guide Selection + Abstract | Finalized project concept, formed development team, selected faculty project guide, and submitted official Wheelyx abstract proposal. | `Completed` | [Week 1 Report](reports/04-weekly-progress/week-01/README.md) |
+| **Week 2** | 13 Jul 2026 – 19 Jul 2026 | Software Requirements Specification (SRS) | Formulated IEEE 830 functional and non-functional requirements, mapped user roles (Customer, Owner, Admin), and defined architectural constraints. | `Completed` | [Week 2 Report](reports/04-weekly-progress/week-02/README.md) |
+| **Week 3** | 20 Jul 2026 – 26 Jul 2026 | UML Design & System Modeling | Created UML Use-Case diagrams, domain Class diagrams, Sequence workflows for booking and key dispatch handovers, and state machines. | `Completed` | [Week 3 Report](reports/04-weekly-progress/week-03/README.md) |
+| **Week 4** | 27 Jul 2026 – 02 Aug 2026 | Database Design & UI Mockups / Wireframes | Designed 17 normalized MySQL 3NF tables, performance B-tree indexes, authored seed datasets (20 cities, 200 hubs, 36 vehicles), and built HTML/CSS mockups. | `Completed` | [Week 4 Report](reports/04-weekly-progress/week-04/README.md) |
+| **Week 5** | 03 Aug 2026 – 09 Aug 2026 | Module Coding: Auth, RBAC & Connection Pool | Engineered HikariCP pool, BCrypt hashing (12 rounds), session handlers, and Jakarta EE security filters (`CustomerAuthFilter`, `OwnerAuthFilter`, `AdminAuthFilter`). | `Completed` | [Week 5 Report](reports/04-weekly-progress/week-05/README.md) |
+| **Week 6** | 10 Aug 2026 – 16 Aug 2026 | Module Coding: Vehicle Catalog, Search & Cities | Built multi-parameter vehicle catalog search, implemented AJAX landmark retrieval (`/api/places`), and owner vehicle onboarding/listing tools. | `Completed` | [Week 6 Report](reports/04-weekly-progress/week-06/README.md) |
+| **Week 7** | 17 Aug 2026 – 23 Aug 2026 | Module Coding: Concurrency Booking & Handover | Implemented atomic date-range overlap validation, pricing quotation service (18% GST, 10% discount for >= 7 days), and key dispatch handover workflow. | `Completed` | [Week 7 Report](reports/04-weekly-progress/week-07/README.md) |
+| **Week 8** | 24 Aug 2026 – 30 Aug 2026 | Module Coding: Billing, Telemetry & Reviews | Implemented GST tax invoicing, multi-channel payment simulator (UPI, Card), live GPS radar telemetry dashboard, and verified post-trip customer reviews. | `Completed` | [Week 8 Report](reports/04-weekly-progress/week-08/README.md) |
+| **Week 9** | 31 Aug 2026 – 06 Sep 2026 | Subsystem Integration & Automated Testing | Merged branches into `wheelyx-integration`, ran 24+ JUnit 5 test suites, resolved edge-case race conditions, and validated mobile tunnel sharing via Cloudflare. | `Completed` | [Week 9 Report](reports/04-weekly-progress/week-09/README.md) |
+| **Week 10** | 07 Sep 2026 – 13 Sep 2026 | Final Report + PPT + Video + Final Viva Prep | Compiled comprehensive project dissertation, designed 15-slide presentation deck (PPT), recorded demo video, and completed individual viva preparations. | `Completed` | [Week 10 Report](reports/04-weekly-progress/week-10/README.md) |
+
+---
+
+## 17. Project Documentation & Academic Reports (9 Components)
+
+The project documentation is structured in [`reports/`](reports/) across 9 specialized components:
+
+| Component | Title | Key Contents | Documentation Link |
+| :---: | :--- | :--- | :--- |
+| **01** | **Idea & Abstract** | Problem statement, proposed solution, innovation highlights | [`reports/01-idea-abstract/`](reports/01-idea-abstract/README.md) |
+| **02** | **SRS / Documentation** | IEEE 830 functional & non-functional requirements | [`reports/02-srs/`](reports/02-srs/README.md) |
+| **03** | **Design (Use-case, Class, ER)** | System models, sequence flows, Mermaid sources & ER diagram | [`reports/03-design/`](reports/03-design/README.md) |
+| **04** | **Weekly Progress** | 10-Week reports, commit logs (`commit_log.csv`), velocity analytics | [`reports/04-weekly-progress/`](reports/04-weekly-progress/README.md) |
+| **05** | **Implementation & Code Quality** | Layered MVC, security filters, DAO patterns & metrics | [`reports/05-implementation/`](reports/05-implementation/README.md) |
+| **06** | **Testing** | Automated JUnit 5 test suites & verification results | [`reports/06-testing/`](reports/06-testing/README.md) |
+| **07** | **Presentation** | 15-Slide Presentation Deck structure & storyline | [`reports/07-presentation/`](reports/07-presentation/README.md) |
+| **08** | **Demo & Viva (Individual)** | 4-Phase demonstration walkthrough script & Viva Q&A guide | [`reports/08-demo-viva/`](reports/08-demo-viva/README.md) |
+| **09** | **Timeline** | Master 10-Week schedule table without report links | [`reports/09-timeline/`](reports/09-timeline/README.md) |
+
+---
+
+## 18. Git Development & Branching Strategy
 
 The Wheelyx repository follows a structured 5-branch modular development lifecycle:
 
@@ -558,6 +602,6 @@ The Wheelyx repository follows a structured 5-branch modular development lifecyc
 
 ---
 
-## 17. License & Attribution
+## 19. License & Attribution
 
 Designed and developed as an integrated vehicle rental and fleet management platform demonstration.
