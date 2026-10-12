@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80">
+  <defs>
+    <linearGradient id="logoBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1F3A"/>
+      <stop offset="100%" stop-color="#155EEF"/>
+    </linearGradient>
+    <linearGradient id="cyanAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00B8D9"/>
+      <stop offset="100%" stop-color="#155EEF"/>
+    </linearGradient>
+  </defs>
+  <!-- Icon Badge -->
+  <g transform="translate(10, 10)">
+    <rect width="60" height="60" rx="14" fill="url(#logoBgGrad)"/>
+    <!-- Sports car silhouette -->
+    <path d="M10 40 C 12 36, 16 35, 21 35 L 26 27 C 28 24, 32 23, 38 23 L 45 23 C 49 23, 51 26, 52 29 L 54 35 C 55 36, 56 38, 56 41 L 55 45 C 55 46, 54 47, 52 47 L 49 47 C 48 43, 44 40, 40 40 C 36 40, 32 43, 31 47 L 22 47 C 21 43, 17 40, 13 40 C 11 40, 9 41, 8 43 L 8 41 C 8 39, 10 40, 10 40 Z" fill="#FFFFFF"/>
+    <!-- Key shape -->
+    <circle cx="20" cy="18" r="4.5" fill="none" stroke="#00B8D9" stroke-width="2.5"/>
+    <path d="M23 21 L 29 27 M 26 25 L 28 23" stroke="#00B8D9" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="15" cy="46" r="3.5" fill="#00B8D9"/>
+    <circle cx="43" cy="46" r="3.5" fill="#00B8D9"/>
+  </g>
+  <!-- Wordmark Text -->
+  <text x="82" y="44" font-family="'Poppins', 'Inter', sans-serif" font-size="28" font-weight="900" fill="#0B1F3A" letter-spacing="2">WHEELY<tspan fill="#155EEF">X</tspan></text>
+  <text x="84" y="60" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#64748B" letter-spacing="1.5">YOUR RIDE. YOUR WAY.</text>
+</svg>
