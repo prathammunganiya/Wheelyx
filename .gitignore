@@ -15,3 +15,6 @@ db.properties
 uploads/temp/
 cloudflared.exe
 *.exe
+.env
+*.env
+!.env.example
