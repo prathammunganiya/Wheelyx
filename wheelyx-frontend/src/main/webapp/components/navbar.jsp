@@ -121,3 +121,5 @@
 <script>
   window.WHEELYX_CONTEXT_PATH = '${pageContext.request.contextPath}';
 </script>
+<script src="${pageContext.request.contextPath}/assets/js/config.js"></script>
+

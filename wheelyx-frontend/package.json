@@ -1,0 +1,15 @@
+{
+  "name": "wheelyx-frontend",
+  "version": "1.0.0",
+  "description": "Wheelyx Frontend Web Client",
+  "scripts": {
+    "build": "node build-config.js",
+    "sync-env": "node build-config.js"
+  },
+  "keywords": [
+    "wheelyx",
+    "frontend"
+  ],
+  "author": "Wheelyx",
+  "license": "ISC"
+}

@@ -212,7 +212,10 @@
       }
 
       function pollTelemetry() {
-        fetch('${pageContext.request.contextPath}/api/tracking/telemetry?vehicleId=${vehicle.id}')
+        const telemetryUrl = (typeof window.getWheelyxApiUrl === 'function')
+          ? window.getWheelyxApiUrl('/api/tracking/telemetry?vehicleId=${vehicle.id}')
+          : '${pageContext.request.contextPath}/api/tracking/telemetry?vehicleId=${vehicle.id}';
+        fetch(telemetryUrl)
           .then(res => res.json())
           .then(data => {
             if (data && data.latitude && data.longitude) {

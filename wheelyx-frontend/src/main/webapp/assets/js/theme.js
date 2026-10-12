@@ -68,8 +68,10 @@
                         return;
                     }
 
-                    const contextPath = window.WHEELYX_CONTEXT_PATH || '';
-                    fetch(`${contextPath}/api/city-places?cityId=${cityId}`)
+                    const placesApiUrl = (typeof window.getWheelyxApiUrl === 'function')
+                        ? window.getWheelyxApiUrl(`/api/city-places?cityId=${cityId}`)
+                        : `${window.WHEELYX_CONTEXT_PATH || ''}/api/city-places?cityId=${cityId}`;
+                    fetch(placesApiUrl)
                         .then(res => res.json())
                         .then(places => {
                             targetSelect.innerHTML = '<option value="">Select Location / Place</option>';
