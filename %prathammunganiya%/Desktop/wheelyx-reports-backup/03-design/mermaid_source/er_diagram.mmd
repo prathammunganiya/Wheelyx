@@ -1,0 +1,15 @@
+erDiagram
+    USERS ||--o{ BOOKINGS : places
+    USERS ||--o{ VEHICLES : owns
+    USERS ||--o| VEHICLE_OWNERS : extends
+    VEHICLE_CATEGORIES ||--o{ VEHICLES : categorizes
+    CITIES ||--o{ CITY_PLACES : contains
+    CITIES ||--o{ VEHICLES : locates
+    CITY_PLACES ||--o{ VEHICLES : hubs
+    VEHICLES ||--o{ BOOKINGS : reserved_in
+    BOOKINGS ||--|| RENTALS : executes
+    BOOKINGS ||--|| BILLS : generates
+    BILLS ||--o{ PAYMENTS : settles
+    RENTALS ||--o| REVIEWS : receives
+    VEHICLES ||--o{ VEHICLE_LOCATIONS : tracks
+    VEHICLES ||--o{ MAINTENANCE : services

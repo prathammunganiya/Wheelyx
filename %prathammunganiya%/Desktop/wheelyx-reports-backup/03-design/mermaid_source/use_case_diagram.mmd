@@ -1,0 +1,31 @@
+flowchart LR
+    Customer((Customer))
+    Owner((Vehicle Owner))
+    Admin((Platform Admin))
+
+    subgraph Wheelyx Platform
+        UC1[Browse & Filter Fleet]
+        UC2[Book Vehicle & Checkout]
+        UC3[Live GPS Tracking]
+        UC4[Submit Verified Review]
+        UC5[List / Edit Vehicle]
+        UC6[Dispatch Handover / Return]
+        UC7[View Earnings & Fleet KPIs]
+        UC8[User Governance]
+        UC9[Fleet Grounding & Maintenance]
+        UC10[Audit Logs & Reports]
+    end
+
+    Customer --> UC1
+    Customer --> UC2
+    Customer --> UC3
+    Customer --> UC4
+
+    Owner --> UC5
+    Owner --> UC6
+    Owner --> UC7
+
+    Admin --> UC8
+    Admin --> UC9
+    Admin --> UC10
+    Admin --> UC1
