@@ -17,7 +17,7 @@
   <jsp:include page="/components/navbar.jsp" />
 
   <header class="py-4 bg-white border-bottom">
-    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+    <div class="container-fluid px-3 px-md-4 px-xl-5 d-flex justify-content-between align-items-center flex-wrap gap-2">
       <div>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb small mb-1">
@@ -33,7 +33,7 @@
     </div>
   </header>
 
-  <main class="container py-4">
+  <main class="container-fluid px-3 px-md-4 px-xl-5 py-4">
     <div class="row g-4">
       <!-- Search & Filters Sidebar Panel -->
       <div class="col-lg-3 col-md-4">
@@ -136,7 +136,7 @@
           <c:when test="${not empty vehicles}">
             <div class="row g-4">
               <c:forEach var="v" items="${vehicles}">
-                <div class="col-xl-4 col-md-6">
+                <div class="col-xxl-3 col-xl-4 col-md-6">
                   <c:set var="v" value="${v}" scope="request" />
                   <jsp:include page="/components/vehicle-card.jsp" />
                 </div>

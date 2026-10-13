@@ -19,7 +19,7 @@
 
   <!-- Hero Section -->
   <header class="wx-hero-section">
-    <div class="container position-relative">
+    <div class="container-fluid px-3 px-md-4 px-xl-5 position-relative">
       <div class="row align-items-center g-5">
         <div class="col-lg-7">
           <div class="hero-tagline mb-2">
@@ -74,7 +74,7 @@
   </header>
 
   <!-- Database-Driven Fast Search Filter Bar -->
-  <section class="container">
+  <section class="container-fluid px-3 px-md-4 px-xl-5">
     <div class="wx-search-bar">
       <form action="${pageContext.request.contextPath}/vehicles" method="GET" class="row g-3 align-items-end">
         <!-- City Selector -->
@@ -119,7 +119,7 @@
 
   <!-- 6 Completely Separate Vehicle Categories -->
   <section class="py-5 mt-4" id="categories">
-    <div class="container">
+    <div class="container-fluid px-3 px-md-4 px-xl-5">
       <div class="text-center mb-5">
         <span class="badge bg-primary bg-opacity-10 text-primary fw-bold px-3 py-2 rounded-pill mb-2">Fleet Taxonomies</span>
         <h2 class="display-6 fw-bold">Six Dedicated Vehicle Categories</h2>
@@ -146,7 +146,7 @@
 
   <!-- Featured Vehicles Section -->
   <section class="py-5 bg-white bg-opacity-50 border-top border-bottom" id="featured">
-    <div class="container">
+    <div class="container-fluid px-3 px-md-4 px-xl-5">
       <div class="d-flex justify-content-between align-items-end mb-4 flex-wrap gap-2">
         <div>
           <span class="badge bg-success bg-opacity-10 text-success fw-bold px-3 py-2 rounded-pill mb-2">Prime Recommendations</span>
@@ -171,7 +171,7 @@
 
   <!-- Why Choose Wheelyx -->
   <section class="py-5" id="why-us">
-    <div class="container">
+    <div class="container-fluid px-3 px-md-4 px-xl-5">
       <div class="text-center mb-5">
         <span class="badge bg-primary bg-opacity-10 text-primary fw-bold px-3 py-2 rounded-pill mb-2">Platform Excellence</span>
         <h2 class="display-6 fw-bold">Why Ride With Wheelyx</h2>
@@ -216,7 +216,7 @@
 
   <!-- How It Works Section -->
   <section class="py-5 bg-white bg-opacity-50 border-top" id="how-it-works">
-    <div class="container">
+    <div class="container-fluid px-3 px-md-4 px-xl-5">
       <div class="text-center mb-5">
         <span class="badge bg-primary bg-opacity-10 text-primary fw-bold px-3 py-2 rounded-pill mb-2">Seamless Workflow</span>
         <h2 class="display-6 fw-bold">How Wheelyx Operates</h2>
@@ -250,7 +250,7 @@
 
   <!-- 20 Indian Cities Highlights -->
   <section class="py-5" id="cities">
-    <div class="container">
+    <div class="container-fluid px-3 px-md-4 px-xl-5">
       <div class="text-center mb-5">
         <span class="badge bg-primary bg-opacity-10 text-primary fw-bold px-3 py-2 rounded-pill mb-2">National Footprint</span>
         <h2 class="display-6 fw-bold">Operational Across 20 Indian Hubs</h2>
@@ -259,7 +259,7 @@
 
       <div class="row g-3">
         <c:forEach var="c" items="${cities}">
-          <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6">
             <a href="${pageContext.request.contextPath}/vehicles?cityId=${c.id}" class="text-decoration-none">
               <div class="wx-card p-3 d-flex align-items-center justify-content-between">
                 <div>
@@ -277,7 +277,7 @@
 
   <!-- Customer Feedback Section (Strictly Real Reviews Only / Empty State If None) -->
   <section class="py-5 bg-white bg-opacity-50 border-top border-bottom" id="customer-feedback">
-    <div class="container">
+    <div class="container-fluid px-3 px-md-4 px-xl-5">
       <div class="text-center mb-5">
         <span class="badge bg-warning bg-opacity-10 text-warning fw-bold px-3 py-2 rounded-pill mb-2">Verified Travelers</span>
         <h2 class="display-6 fw-bold">Customer Feedback</h2>
@@ -335,7 +335,7 @@
 
   <!-- Call to Action Banner -->
   <section class="py-5">
-    <div class="container">
+    <div class="container-fluid px-3 px-md-4 px-xl-5">
       <div class="p-5 rounded-4 text-center text-white position-relative overflow-hidden" style="background: var(--wx-hero-gradient);">
         <h2 class="display-5 fw-bold mb-3">Ready to Hit the Open Road?</h2>
         <p class="lead mb-4 text-white-50">Discover self-drive freedom across India with verified safety, GPS telemetry, and instant bookings.</p>

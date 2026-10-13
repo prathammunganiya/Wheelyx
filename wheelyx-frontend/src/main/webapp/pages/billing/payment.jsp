@@ -15,7 +15,7 @@
 <body>
   <jsp:include page="/components/navbar.jsp" />
 
-  <div class="container py-5">
+  <div class="container-fluid px-3 px-md-4 px-xl-5 py-5">
     <div class="row justify-content-center">
       <div class="col-lg-7 col-md-9">
         <div class="wx-card p-4 p-md-5">

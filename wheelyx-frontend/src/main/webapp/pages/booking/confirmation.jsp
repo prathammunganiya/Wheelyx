@@ -15,7 +15,7 @@
 <body class="bg-light">
   <jsp:include page="/components/navbar.jsp" />
 
-  <main class="container py-5">
+  <main class="container-fluid px-3 px-md-4 px-xl-5 py-5">
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <!-- Success Banner -->

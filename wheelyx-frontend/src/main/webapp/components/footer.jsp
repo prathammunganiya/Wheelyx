@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <footer class="wx-footer">
-  <div class="container">
+  <div class="container-fluid px-3 px-md-4 px-xl-5">
     <div class="row g-4 mb-4">
       <!-- Brand & Mission -->
       <div class="col-lg-4 col-md-6">

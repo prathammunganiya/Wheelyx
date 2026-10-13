@@ -52,7 +52,7 @@
 <body>
   <jsp:include page="/components/navbar.jsp" />
 
-  <div class="container py-4 py-md-5">
+  <div class="container-fluid px-3 px-md-4 px-xl-5 py-4 py-md-5">
     <!-- Breadcrumb & Top Bar -->
     <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
       <div>

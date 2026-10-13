@@ -16,7 +16,7 @@
   <jsp:include page="/components/navbar.jsp" />
 
   <header class="py-3 bg-white border-bottom">
-    <div class="container">
+    <div class="container-fluid px-3 px-md-4 px-xl-5">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb small mb-0">
           <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/home">Home</a></li>
@@ -27,7 +27,7 @@
     </div>
   </header>
 
-  <main class="container py-4">
+  <main class="container-fluid px-3 px-md-4 px-xl-5 py-4">
     <div class="row g-4">
       <!-- Left Column: Large Vehicle Image & Specs -->
       <div class="col-lg-7">

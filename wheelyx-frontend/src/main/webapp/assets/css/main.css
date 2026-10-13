@@ -96,7 +96,31 @@ a:hover {
   color: var(--wx-cyan);
 }
 
-/* Glassmorphism Navbar */
+/* =====================================================================
+   Full-Width & Expanded Webpage Layout System
+   Expands all page layouts across the full viewport width and removes
+   narrow container limits while maintaining responsive edge padding.
+   ===================================================================== */
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: clamp(1rem, 2.5vw, 2.5rem) !important;
+  padding-right: clamp(1rem, 2.5vw, 2.5rem) !important;
+}
+
+.container-fluid {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: clamp(1rem, 2.5vw, 2.5rem) !important;
+  padding-right: clamp(1rem, 2.5vw, 2.5rem) !important;
+}
+
+/* Glassmorphism Navbar — Expanded Full Area */
 .wx-navbar {
   background: var(--wx-navbar-bg) !important;
   backdrop-filter: blur(16px);
@@ -106,10 +130,18 @@ a:hover {
   top: 0;
   z-index: 1030;
   transition: all 0.3s ease;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.wx-navbar .navbar-brand {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
 }
 
 .wx-brand-logo {
-  height: 54px;
+  height: 52px;
   width: auto;
   max-width: 220px;
   object-fit: contain;
@@ -372,7 +404,7 @@ a:hover {
 .hero-subtitle {
   font-size: 1.25rem;
   color: rgba(255, 255, 255, 0.85);
-  max-width: 580px;
+  max-width: 720px;
 }
 
 /* Search Bar Component */
@@ -380,11 +412,12 @@ a:hover {
   background: var(--wx-surface);
   border: 1px solid var(--wx-border);
   border-radius: 18px;
-  padding: 1.25rem;
+  padding: 1.5rem;
   box-shadow: 0 10px 30px rgba(11, 31, 58, 0.12);
   margin-top: -2.5rem;
   position: relative;
   z-index: 20;
+  width: 100%;
 }
 
 /* Category Grid */

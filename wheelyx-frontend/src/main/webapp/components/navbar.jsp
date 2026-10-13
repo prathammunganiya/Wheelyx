@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 
-<nav class="navbar navbar-expand-lg wx-navbar py-2">
-  <div class="container">
-    <!-- Brand Logo Lockup (Integrated Wheelyx Mark) -->
-    <a class="navbar-brand d-flex align-items-center me-3 me-lg-4 py-1" href="${pageContext.request.contextPath}/home" title="Wheelyx — Move Your Way">
+<nav class="navbar navbar-expand-lg wx-navbar py-2 w-100">
+  <div class="container-fluid px-3 px-md-4 px-xl-5">
+    <!-- Brand Logo Lockup (Top-Left Corner Position) -->
+    <a class="navbar-brand d-flex align-items-center me-3 me-lg-4 py-1 ps-0" href="${pageContext.request.contextPath}/home" title="Wheelyx — Move Your Way">
       <img src="${pageContext.request.contextPath}/assets/images/logo/wheelyx-logo.png?v=2" 
            alt="Wheelyx — Move Your Way" 
            class="wx-brand-logo"
@@ -47,7 +47,7 @@
       </ul>
 
       <!-- Right Header Actions (Theme Toggle & Auth) -->
-      <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+      <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0 ms-lg-auto">
         <!-- Light / Dark Theme Switch -->
         <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme">
           <i class="bi bi-moon-stars-fill text-primary"></i> <span>Dark</span>

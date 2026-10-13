@@ -12,7 +12,7 @@
 <body class="d-flex flex-column min-vh-100">
   <jsp:include page="/components/navbar.jsp" />
 
-  <main class="container my-auto py-5 text-center">
+  <main class="container-fluid px-3 px-md-4 px-xl-5 my-auto py-5 text-center">
     <div class="row justify-content-center">
       <div class="col-md-7 col-lg-5">
         <div class="display-1 fw-bold text-primary mb-3">404</div>
