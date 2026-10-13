@@ -25,19 +25,42 @@ Wheelyx is designed using an enterprise **Layered Architecture** adhering to the
 [Database Layer]        MySQL 8.0 Engine (InnoDB, UTF-8 MB4)
 ```
 
+### Component Architecture
+![Component Architecture](images/component_architecture.png)
+
+### Deployment Architecture
+![Deployment Architecture](images/deployment_architecture.png)
+
+### Java Package Diagram
+![Package Diagram](images/package_diagram.png)
+
 ---
 
-## 2. Diagram Resources & Sources
+## 2. Diagram Resources & Visual Assets
+- Visual diagram exports are located in [`images/`](images/):
+  - [Component Architecture](images/component_architecture.png)
+  - [Deployment Architecture](images/deployment_architecture.png)
+  - [Package Diagram](images/package_diagram.png)
+  - [Use Case Diagram](images/use_case_diagram.png)
+  - [Domain Class Diagram](images/class_diagram.png)
+  - [Database ER Diagram](images/database_er_diagram.png)
+  - [Sequence: Booking a Vehicle](images/sequence_booking.png)
+  - [Sequence: Rental & Payment](images/sequence_rental_payment.png)
+  - [Sequence: User Login](images/sequence_user_login.png)
+  - [Activity: Vehicle Booking Process](images/activity_booking_process.png)
+  - [Activity: Rental and Return Process](images/activity_rental_return.png)
+  - [State Machine: Vehicle Lifecycle](images/vehicle_lifecycle_state_diagram.png)
 - Raw Mermaid diagram source code is available in [`mermaid_source/`](mermaid_source/):
   - [`use_case_diagram.mmd`](mermaid_source/use_case_diagram.mmd)
   - [`class_diagram.mmd`](mermaid_source/class_diagram.mmd)
   - [`sequence_booking.mmd`](mermaid_source/sequence_booking.mmd)
   - [`er_diagram.mmd`](mermaid_source/er_diagram.mmd)
-- Visual diagram exports are located in [`images/`](images/).
 
 ---
 
 ## 3. Platform Use-Case Model
+
+![Use Case Diagram](images/use_case_diagram.png)
 
 ```mermaid
 flowchart LR
@@ -75,7 +98,10 @@ flowchart LR
 
 ---
 
-## 4. Class Diagram & Entity Relationships
+## 4. Class Diagram & Database Relationships
+
+### Domain Class Model
+![Class Diagram](images/class_diagram.png)
 
 ```mermaid
 classDiagram
@@ -152,9 +178,15 @@ classDiagram
     Rental "1" --> "0..1" Review : verified by
 ```
 
+### Database ER Diagram
+![Database ER Diagram](images/database_er_diagram.png)
+
 ---
 
-## 5. Sequence Diagram: Booking & Handover Lifecycle
+## 5. Sequence Diagrams: Operational Workflows
+
+### Sequence: Booking a Vehicle
+![Sequence Diagram - Booking a Vehicle](images/sequence_booking.png)
 
 ```mermaid
 sequenceDiagram
@@ -184,3 +216,24 @@ sequenceDiagram
     RentalService->>VehicleDAO: Set vehicle status -> ACTIVE_RENTAL
     RentalService-->>Customer: Notification: Trip Started & Tracking Live!
 ```
+
+### Sequence: Rental and Payment
+![Sequence Diagram - Rental and Payment](images/sequence_rental_payment.png)
+
+### Sequence: User Login Authentication
+![Sequence Diagram - User Login](images/sequence_user_login.png)
+
+---
+
+## 6. Activity Diagrams: Process Workflows
+
+### Vehicle Booking Process
+![Activity Diagram - Vehicle Booking Process](images/activity_booking_process.png)
+
+### Rental and Return Process
+![Activity Diagram - Rental and Return Process](images/activity_rental_return.png)
+
+---
+
+## 7. State Machine Diagram: Vehicle Lifecycle
+![Vehicle Lifecycle State Diagram](images/vehicle_lifecycle_state_diagram.png)
