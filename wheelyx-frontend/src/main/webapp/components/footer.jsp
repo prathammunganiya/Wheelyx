@@ -5,10 +5,10 @@
     <div class="row g-4 mb-4">
       <!-- Brand & Mission -->
       <div class="col-lg-4 col-md-6">
-        <img src="${pageContext.request.contextPath}/assets/images/logo/wheelyx-logo.png" 
+        <img src="${pageContext.request.contextPath}/assets/images/logo/wheelyx-logo.png?v=2" 
              alt="Wheelyx — Move Your Way" 
-             class="mb-3 rounded"
-             style="height: 58px; width: auto; object-fit: contain; background: rgba(255, 255, 255, 0.96); padding: 5px 12px; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);"
+             class="mb-3"
+             style="height: 54px; width: auto; object-fit: contain; filter: brightness(1.2) drop-shadow(0 2px 8px rgba(0, 184, 217, 0.2));"
              onerror="this.onerror=null; this.src='${pageContext.request.contextPath}/assets/images/logo/wheelyx-logo.svg';">
         <p class="text-white-50 small mb-2">
           <strong>Wheelyx</strong> — Integrated Vehicle Rental and Fleet Management Platform.

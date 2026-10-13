@@ -36,7 +36,7 @@
                alt="${vehicle.modelName}" 
                class="img-fluid rounded-3"
                style="max-height: 380px; object-fit: contain;"
-               onerror="this.onerror=null; this.src='${pageContext.request.contextPath}/assets/images/vehicles/cars/swift.jpg';">
+               onerror="this.onerror=null; this.src='${pageContext.request.contextPath}/assets/images/vehicles/cars/swift.png';">
         </div>
 
         <!-- Specifications & Features -->

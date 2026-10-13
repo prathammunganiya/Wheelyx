@@ -31,7 +31,7 @@
     <img src="${pageContext.request.contextPath}/${v.imageUrl}" 
          alt="${v.modelName}" 
          loading="lazy"
-         onerror="this.onerror=null; this.src='${pageContext.request.contextPath}/assets/images/vehicles/cars/swift.jpg';">
+         onerror="this.onerror=null; this.src='${pageContext.request.contextPath}/assets/images/vehicles/cars/swift.png';">
   </div>
 
   <!-- Vehicle Content -->

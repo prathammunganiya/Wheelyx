@@ -182,9 +182,13 @@ public class AppConfig {
             return "true".equalsIgnoreCase(sslVal) || "required".equalsIgnoreCase(sslVal) || "1".equals(sslVal);
         }
 
-        // If DB_SSL_MODE is specified, enable SSL unless explicitly DISABLED
-        String sslMode = getDbSslMode();
-        return sslMode != null && !sslMode.equalsIgnoreCase("DISABLED") && !sslMode.equalsIgnoreCase("false");
+        String rawMode = getFirstOf(new String[]{
+            "db.ssl.mode", "DB_SSL_MODE", "SSL_MODE"
+        }, null);
+        if (rawMode != null) {
+            return !rawMode.equalsIgnoreCase("DISABLED") && !rawMode.equalsIgnoreCase("false");
+        }
+        return false;
     }
 
     /**
@@ -192,9 +196,10 @@ public class AppConfig {
      * Defaults to "REQUIRED" for Aiven and cloud databases.
      */
     public static String getDbSslMode() {
+        String defaultMode = isDbSslEnabled() ? "REQUIRED" : "DISABLED";
         return getFirstOf(new String[]{
             "db.ssl.mode", "DB_SSL_MODE", "SSL_MODE"
-        }, isDbSslEnabled() ? "REQUIRED" : "DISABLED");
+        }, defaultMode);
     }
 
     public static int getPoolMinIdle() {

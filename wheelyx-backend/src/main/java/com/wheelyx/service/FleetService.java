@@ -87,7 +87,7 @@ public class FleetService {
 
         // Default image fallback if none provided
         if (!ValidationUtil.isNotEmpty(vehicle.getImageUrl())) {
-            vehicle.setImageUrl("assets/images/vehicles/cars/swift.jpg");
+            vehicle.setImageUrl("assets/images/vehicles/cars/swift.png");
         }
 
         vehicle.setStatus("AVAILABLE");

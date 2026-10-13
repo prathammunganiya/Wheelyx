@@ -60,7 +60,7 @@
 
         <div class="col-lg-5 text-center d-none d-lg-block">
           <div class="p-3 bg-white bg-opacity-10 rounded-4 border border-white border-opacity-25 shadow-lg">
-            <img src="${pageContext.request.contextPath}/assets/images/vehicles/cars/swift.jpg" 
+            <img src="${pageContext.request.contextPath}/assets/images/vehicles/cars/swift.png" 
                  alt="Wheelyx Fleet Vehicle" 
                  class="img-fluid rounded-3"
                  style="max-height: 290px; object-fit: contain;">

@@ -5,7 +5,7 @@
   <div class="container">
     <!-- Brand Logo Lockup (Integrated Wheelyx Mark) -->
     <a class="navbar-brand d-flex align-items-center me-3 me-lg-4 py-1" href="${pageContext.request.contextPath}/home" title="Wheelyx — Move Your Way">
-      <img src="${pageContext.request.contextPath}/assets/images/logo/wheelyx-logo.png" 
+      <img src="${pageContext.request.contextPath}/assets/images/logo/wheelyx-logo.png?v=2" 
            alt="Wheelyx — Move Your Way" 
            class="wx-brand-logo"
            onerror="this.onerror=null; this.src='${pageContext.request.contextPath}/assets/images/logo/wheelyx-logo.svg';">
@@ -121,3 +121,5 @@
 <script>
   window.WHEELYX_CONTEXT_PATH = '${pageContext.request.contextPath}';
 </script>
+<script src="${pageContext.request.contextPath}/assets/js/config.js"></script>
+
